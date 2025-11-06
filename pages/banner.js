@@ -1,13 +1,31 @@
 import { Container } from 'theme-ui'
 import Header from '../components/header'
 import Content from '../components/content'
-import Banner from '@hackclub/banner'
+import React from 'react'
 
+// Local Banner component to avoid package issues
+const Banner = ({ year = new Date().getFullYear(), style, ...props }) => (
+  <a href="https://hackclub.com/" target="_blank" {...props}>
+    <img
+      style={{
+        width: '230px',
+        position: 'absolute',
+        top: '10px',
+        left: 0,
+        border: 0,
+        zIndex: '999',
+        ...style
+      }}
+      src={`https://assets.hackclub.com/banners/${year}.svg`}
+      alt="Hack Club"
+    />
+  </a>
+)
 const Page = ({ html }) => (
   <>
     <Banner />
     <Header
-      title="@hackclub/banner"
+      title="@happyhackingspace/banner"
       desc="React component for adding a Hack Club banner to your site"
       img={`https://workshop-cards.hackclub.com/${encodeURIComponent(
         'Banners'

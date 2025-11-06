@@ -16,6 +16,7 @@
     "@hackclub/markdown": "^0.0.43",
     "@hackclub/meta": "^1.0.0",
     "@hackclub/theme": "^0.3.0",
+    "@happyhackingspace/banner": "^0.0.1",
     "@mdx-js/loader": "^1.6.19",
     "@next/mdx": "^10.0.0",
     "download-git-repo": "^3.0.2",
